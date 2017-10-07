@@ -6,7 +6,7 @@ function addEventHandler(elem, eventType, handler) {
 }
 
 addEventHandler(document, 'DOMContentLoaded', function() {
-    addEventHandler(document.getElementById('code'), 'change', function() {
-        document.getElementById('codePreview').innerHTML = document.getElementById('codePreview').dataset.code;
+    addEventHandler(document.querySelector('.code__input'), 'change', function() {
+        document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
     });
 });

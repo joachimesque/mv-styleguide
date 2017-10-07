@@ -6,21 +6,34 @@
   <title>Test</title>
   <script src="https://get.mavo.io/mavo.min.js"></script>
   <script src="script.js"></script>
-  <script type="text/plain" src="https://raw.githubusercontent.com/Falafel65/mavo-locale-fr/master/mavo-locale-fr.js"></script>
   <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
   <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Neuton|Open+Sans" rel="stylesheet"> 
 </head>
 <body>
-  <div mv-app="styleguide" mv-storage="local" mv-plugins="mavo-locale-fr">
+  <div mv-app="styleguide" mv-storage="local">
     <div class="mv-bar mv-ui"></div>
     <h1>Styleguide</h1>
-    <div property="element" mv-multiple>
-      <div class="codePreview" id="codePreview" data-code="[codeEntry]"></div>
-      <div class="desc">
-        <h2 class="desc__title" property="title">Element Title</h2>
-        <p class="desc__text" property="text">Element Desc Paragraph</p>
+    
+    <p class="list__heading">
+      <span>Rendered Element</span>
+      <span>HTML Code</span>
+      <span>Name &amp; description</span>
+    </p>
+    <div class="list">
+      <div property="element" mv-multiple>
+        <div class="preview__wrapper">
+          <div class="preview" data-code="[code__input]">
+            <button>A simple button</button>
+          </div>
+        </div>
+        <pre><code property class="code__input">&lt;button&gt;A simple button&lt;/button&gt;</code></pre>
+        <div class="desc">
+          <h2 class="desc__title" property="title">A simple button</h2>
+          <p class="desc__text markdown" property="text">This simple button can be deployed at any time.</p>
+        </div>
       </div>
-      <pre id="code" property="codeEntry"></pre>
     </div>
   </div>
 </body>

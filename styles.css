@@ -1,3 +1,66 @@
-[mv-mode="edit"] .code {
-  display:none;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+/* Styles */
+html {
+  font-family: "Neuton", serif;
+  font-size: 16px;
+  padding: 1em;
+  line-height: 133%;
+}
+pre, code {
+  font-family: "Inconsolata", monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 166%;
+}
+h1 { font-size: 2em;}
+h2 { font-size: 1.6em;}
+
+.list__heading {
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 3em;
+}
+
+[property="element"], .list__heading  {
+    display: flex;
+    width: 100%;
+    padding-bottom: 2em;
+}
+[property="element"]:not(:first-child) {
+    padding-top: 2em;
+    border-top: 1px solid gray;
+}
+[property="element"] > *, .list__heading > * {
+    flex: 1 0 0;
+}
+.preview__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  1px solid #999;
+}
+pre {
+  background: #222;
+  color: #eee;
+  padding: 1em;
+  margin:  0 1em;
+}
+.desc {
+  padding-bottom: 1em;
+}
+
+
+[mv-mode="edit"] .preview__wrapper {
+  background-color: #f6F6F6;
+}
+[mv-mode="edit"] .preview {
+  /* display:none; */
+  opacity: .5;
 }
