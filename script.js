@@ -12,7 +12,10 @@ function addEventHandler(elem, eventType, handler) {
 // });
 
 addEventHandler(document, 'DOMContentLoaded', function() {
-    addEventHandler(document, 'mavo:datachange.mavo or mavo:load.mavo', function() {
+    addEventHandler(document, 'mavo:load.mavo', function() {
+        document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
+    });
+    addEventHandler(document, 'mavo:datachange.mavo', function() {
         document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
     });
 });
