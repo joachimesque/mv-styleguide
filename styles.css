@@ -11,6 +11,7 @@ html {
   padding: 1em;
   line-height: 133%;
 }
+small { font-size: .66em; }
 pre, code {
   font-family: "Inconsolata", monospace;
 }
