@@ -9,29 +9,25 @@
   <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
   <link rel="stylesheet" href="styles.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Neuton|Open+Sans" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans" rel="stylesheet"> 
 </head>
 <body>
   <div mv-app="styleguide" mv-storage="local">
     <div class="mv-bar mv-ui"></div>
     <h1>Styleguide <small>with <a href="https://mavo.io">Mavo</a></small></h1>
     
-    <p class="list__heading">
-      <span>Rendered Element</span>
-      <span>HTML Code</span>
-      <span>Name &amp; description</span>
-    </p>
     <div class="list">
       <div property="element" mv-multiple>
-        <div class="preview__wrapper">
-          <!-- <div class="preview" data-code="[code__input]">
-          </div> -->
-          <iframe  srcdoc="<html class='iframe'><head><link rel='stylesheet' href='styles.css'></head><body class='preview'>[code__input]</body></html>"></iframe>
-        </div>
-        <pre><code property class="code__input">&lt;button&gt;A simple button&lt;/button&gt;</code></pre>
-        <div class="desc">
+        <div class="desc__wrapper">
           <h2 class="desc__title" property="title">A simple button</h2>
           <p class="desc__text markdown" property="text">This simple button can be deployed at any time.</p>
+        </div>
+
+        <div class="preview__wrapper">
+          <iframe  srcdoc="<html class='iframe__content'><head><link rel='stylesheet' href='styles.css'></head><body class='preview'>[code__input]</body></html>"></iframe>
+        </div>
+        <div class="code__input__wrapper">
+          <div property class="code__input monospace" mv-default="Your HTML code"></div>
         </div>
       </div>
     </div>

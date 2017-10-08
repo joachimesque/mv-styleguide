@@ -6,73 +6,98 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 
 /* Styles */
 html {
-  font-family: "Neuton", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   padding: 1em;
   line-height: 133%;
 }
 small { font-size: .66em; }
-pre, code {
+pre, code, .monospace {
   font-family: "Inconsolata", monospace;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  line-height: 166%;
+  line-height: 133%;
   text-align: left;
 }
 h1 { font-size: 2em;}
 h2 { font-size: 1.6em;}
 
-.list__heading {
-  font-size: 1.2em;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 3em;
-}
+p { line-height: 166%; }
 
-[property="element"], .list__heading  {
+[property="element"]  {
     display: flex;
     width: 100%;
-    padding-bottom: 2em;
-}
-[property="element"]:not(:first-child) {
-    padding-top: 2em;
+    padding: 2em 0;
+    flex-wrap: wrap;
     border-top: 1px solid gray;
 }
-[property="element"] > *, .list__heading > * {
+[property="element"] > * {
     flex: 1 0 0;
 }
+
+.desc__wrapper {
+  flex: 1 0 70%;
+  padding: 0 15% 3em;
+}
+
 .preview__wrapper {
     border:  1px solid #999;
+    position: relative;
+}
+.preview__wrapper::before {
+  background: white;
+  border: 1px solid #999;
+  border-bottom: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  bottom: calc(100%);
+  content: "rendered element";
+  font-size: .66rem;
+  left: -1px;
+  padding: .3em .5em;
+  position: absolute;
 }
 .preview__wrapper iframe {
     width: 100%;
     display: block;
+    min-height: 50px;
 }
-html.iframe {
-  height: calc(100% - 2em);
+html.iframe__content {
+  padding: 1em;
+  /* height: 100%; */
 }
 body.preview {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
+    /* min-height: 100%; */
 }
-pre {
+.code__input__wrapper {
   background: #222;
   color: #eee;
   padding: 1em;
   margin:  0 1em;
+  position: relative;
 }
-.desc {
-  padding-bottom: 1em;
+.code__input__wrapper::before {
+  background: #222;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  bottom: calc(100%);
+  color: #eee;
+  content: "HTML code";
+  font-size: .66rem;
+  left: 0;
+  padding: .3em .5em;
+  position: absolute;
 }
 
 
 [mv-mode="edit"] .preview__wrapper {
   background-color: #f6F6F6;
 }
-[mv-mode="edit"] .preview {
+[mv-mode="edit"] iframe {
   /* display:none; */
   opacity: .5;
 }
