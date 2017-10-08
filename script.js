@@ -4,7 +4,7 @@ var forEach = function (array, callback, scope) {
   }
 };
 
-function updateAllPreviewElements(previewElementSelector) {
+function updateAllPreviewElements() {
     var iframes = document.querySelectorAll("iframe");
     forEach(iframes, function (index, value) {
       // I add a little bit of space so the preview space isn't too cramped
@@ -16,10 +16,10 @@ function updateAllPreviewElements(previewElementSelector) {
 document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mavo:load', function() {
       console.log("mavo:load")
-      updateAllPreviewElements('.preview');
+      updateAllPreviewElements();
     });
     document.addEventListener('mavo:save', function() {
       console.log("mavo.save")
-      updateAllPreviewElements('.preview');
+      updateAllPreviewElements();
     });
 });
