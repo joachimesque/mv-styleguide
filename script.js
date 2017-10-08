@@ -5,8 +5,14 @@ function addEventHandler(elem, eventType, handler) {
         elem.attachEvent ('on' + eventType, handler); 
 }
 
+// addEventHandler(document, 'DOMContentLoaded', function() {
+//     addEventHandler(document.querySelector('.code__input'), 'change', function() {
+//         document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
+//     });
+// });
+
 addEventHandler(document, 'DOMContentLoaded', function() {
-    addEventHandler(document.querySelector('.code__input'), 'change', function() {
+    addEventHandler(document, 'mavo:datachange.mavo or mavo:load.mavo', function() {
         document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
     });
 });
