@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>A Styleguide with Mavo</title>
-  <script src="https://get.mavo.io/mavo.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
-  <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A Styleguide with Mavo</title>
+    <script src="https://get.mavo.io/mavo.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+    <link rel="stylesheet" href="styles.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans" rel="stylesheet"> 
-</head>
-<body>
-  <div mv-app="styleguide" mv-storage="local" mv-init="https://github.com/joachimesque/mv-styleguide/data-styleguide.json">
-    <div class="mv-bar mv-ui"></div>
-    <h1>Styleguide <small>with <a href="https://mavo.io">Mavo</a></small></h1>
-    <p>This styleguide uses a stylesheet located at : <span property="stylesheet_url">https://joachimesque.github.io/mv-styleguide/styleguide-stylesheet.css</span></p>
-    <div class="list">
-      <div property="element" mv-multiple>
-        <div class="desc__wrapper">
-          <h2 class="desc__title" property="title"></h2>
-          <p class="desc__text markdown" property="text"></p>
-        </div>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans" rel="stylesheet"> 
+  </head>
+  <body>
+    <div mv-app="styleguide" mv-storage="local" mv-init="https://github.com/joachimesque/mv-styleguide/data-styleguide.json">
+      <div class="mv-bar mv-ui"></div>
+      <h1>Styleguide <small>with <a href="https://mavo.io">Mavo</a></small></h1>
+      <p>This styleguide uses a stylesheet located at : <span property="stylesheet_url">https://joachimesque.github.io/mv-styleguide/styleguide-stylesheet.css</span></p>
+      <div class="list">
+        <div property="element" mv-multiple>
+          <div class="desc__wrapper">
+            <h2 class="desc__title" property="title"></h2>
+            <p class="desc__text markdown" property="text"></p>
+          </div>
 
-        <div class="preview__wrapper">
-          <iframe  srcdoc="<html class='iframe__content'><head><link rel='stylesheet' href='[stylesheet_url]'><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'></head><body class='preview'>[code__input]</body></html>"></iframe>
-        </div>
-        <div class="code__input__wrapper">
-          <div property class="code__input monospace"></div>
+          <div class="preview__wrapper">
+            <iframe  srcdoc="<html class='iframe__content'><head><link rel='stylesheet' href='[stylesheet_url]'><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'></head><body class='preview'>[code__input]</body></html>"></iframe>
+          </div>
+          <div class="code__wrapper">
+            <div property class="code__input monospace"></div>
+            <button class="code__copybtn">copy HTML</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

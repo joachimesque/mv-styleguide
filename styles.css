@@ -73,14 +73,14 @@ body.preview {
     align-items: center;
     /* min-height: 100%; */
 }
-.code__input__wrapper {
+.code__wrapper {
   background: #222;
   color: #eee;
   padding: 1em;
   margin:  0 1em;
   position: relative;
 }
-.code__input__wrapper::before {
+.code__wrapper::before {
   background: #222;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -93,6 +93,37 @@ body.preview {
   position: absolute;
 }
 
+
+.code__copybtn {
+  position: absolute;
+  right: 0;
+  border: 1px solid #222;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  bottom: 100%;
+  background: #222;
+  color: #eee;
+  font-size: .66rem;
+  padding: calc(.3em - 1px) .5em .3em;
+  cursor: pointer;
+  border-bottom: 0;
+  line-height: 100%;
+}
+.code__copybtn.success {
+  transition: all 1s ease-out;
+}
+.code__copybtn.fail {
+  background: darkred;
+  color: #eee;
+}
+.code__copybtn:hover {
+  background: #eee;
+  color: #222;
+  transition: none;
+}
+[mv-mode="edit"] .code__copybtn {
+  display: none;
+}
 
 [mv-mode="edit"] .preview__wrapper {
   background-color: #f6F6F6;
