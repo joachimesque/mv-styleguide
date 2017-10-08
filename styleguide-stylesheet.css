@@ -39,9 +39,11 @@ a {
 a::after {
   content: "➹";
   color: #381FFF;
-  padding-left: .2em;
+  padding-left: .1em;
   text-decoration: none;
   font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
 }
 a[href^="#"]::after {
   content: "⚓";
