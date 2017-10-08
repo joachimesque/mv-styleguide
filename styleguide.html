@@ -15,7 +15,7 @@
   <div mv-app="styleguide" mv-storage="local" mv-source="https://github.com/joachimesque/mv-styleguide/data-styleguide.json">
     <div class="mv-bar mv-ui"></div>
     <h1>Styleguide <small>with <a href="https://mavo.io">Mavo</a></small></h1>
-    
+    <p>This styleguide uses a stylesheet located at : <span class="" property="stylesheet_url">https://joachimesque.github.io/mv-styleguide/styleguide-stylesheet.css</span></p>
     <div class="list">
       <div property="element" mv-multiple>
         <div class="desc__wrapper">
@@ -24,7 +24,7 @@
         </div>
 
         <div class="preview__wrapper">
-          <iframe  srcdoc="<html class='iframe__content'><head><link rel='stylesheet' href='styleguide-stylesheet.css'><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'></head><body class='preview'>[code__input]</body></html>"></iframe>
+          <iframe  srcdoc="<html class='iframe__content'><head><link rel='stylesheet' href='[stylesheet_url]'><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'></head><body class='preview'>[code__input]</body></html>"></iframe>
         </div>
         <div class="code__input__wrapper">
           <div property class="code__input monospace" mv-default="Your HTML code"></div>
