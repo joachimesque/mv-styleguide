@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 166%;
+  text-align: left;
 }
 h1 { font-size: 2em;}
 h2 { font-size: 1.6em;}
@@ -42,10 +43,20 @@ h2 { font-size: 1.6em;}
     flex: 1 0 0;
 }
 .preview__wrapper {
+    border:  1px solid #999;
+}
+.preview__wrapper iframe {
+    width: 100%;
+    display: block;
+}
+html.iframe {
+  height: calc(100% - 2em);
+}
+body.preview {
     display: flex;
     justify-content: center;
     align-items: center;
-    border:  1px solid #999;
+    min-height: 100%;
 }
 pre {
   background: #222;

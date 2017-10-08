@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>A Styleguide with Mavo</title>
   <script src="https://get.mavo.io/mavo.min.js"></script>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
   <link rel="stylesheet" href="styles.css">
 
@@ -24,8 +24,9 @@
     <div class="list">
       <div property="element" mv-multiple>
         <div class="preview__wrapper">
-          <div class="preview" data-code="[code__input]">
-          </div>
+          <!-- <div class="preview" data-code="[code__input]">
+          </div> -->
+          <iframe  srcdoc="<html class='iframe'><head><link rel='stylesheet' href='styles.css'></head><body class='preview'>[code__input]</body></html>"></iframe>
         </div>
         <pre><code property class="code__input">&lt;button&gt;A simple button&lt;/button&gt;</code></pre>
         <div class="desc">
