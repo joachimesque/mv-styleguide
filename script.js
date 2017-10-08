@@ -18,11 +18,15 @@ function updateAllPreviewElements() {
 
 document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mavo:load', function() {
-      console.log("mavo:load")
+      console.log("mavo:load");
       updateAllPreviewElements();
     });
     document.addEventListener('mavo:save', function() {
-      console.log("mavo.save")
+      console.log("mavo:save");
+      updateAllPreviewElements();
+    });
+    document.addEventListener('mavo:datachange', function() {
+      console.log("mavo:datachange");
       updateAllPreviewElements();
     });
 });
