@@ -6,23 +6,24 @@ function addEventHandler(elem, eventType, handler) {
 }
 
 
-function forEach(array, callback, scope) {
+var forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 
-function updateCodeElements(previewElementSelector) {
+function updateAllPreviewElements(previewElementSelector) {
     var previewElementsList = document.querySelectorAll(previewElementSelector);
     forEach(previewElementsList, function (index, value) {
-        this.innerHTML = this.dataset.code;
+      console.log(this);
+        previewElementsList[index].innerHTML = previewElementsList[index].dataset.code;
     });
 }
 addEventHandler(document, 'DOMContentLoaded', function() {
     addEventHandler(document, 'mavo:load.mavo', function() {
-      updateCodeElements('.preview')
+      updateAllPreviewElements('.preview');
     });
-    addEventHandler(document, 'mavo:datachange.mavo', function() {
-      updateCodeElements('.preview')
+    addEventHandler(document, 'mavo:datachange', function() {
+      updateAllPreviewElements('.preview');
     });
 });
