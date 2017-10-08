@@ -5,17 +5,24 @@ function addEventHandler(elem, eventType, handler) {
         elem.attachEvent ('on' + eventType, handler); 
 }
 
-// addEventHandler(document, 'DOMContentLoaded', function() {
-//     addEventHandler(document.querySelector('.code__input'), 'change', function() {
-//         document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
-//     });
-// });
 
+function forEach(array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
+};
+
+function updateCodeElements(previewElementSelector) {
+    var previewElementsList = document.querySelectorAll(previewElementSelector);
+    forEach(previewElementsList, function (index, value) {
+        this.innerHTML = this.dataset.code;
+    });
+}
 addEventHandler(document, 'DOMContentLoaded', function() {
     addEventHandler(document, 'mavo:load.mavo', function() {
-        document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
+      updateCodeElements('.preview')
     });
     addEventHandler(document, 'mavo:datachange.mavo', function() {
-        document.querySelector('.preview').innerHTML = document.querySelector('.preview').dataset.code;
+      updateCodeElements('.preview')
     });
 });
