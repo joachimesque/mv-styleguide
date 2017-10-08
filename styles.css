@@ -38,8 +38,7 @@ p { line-height: 166%; }
 }
 
 .desc__wrapper {
-  flex: 1 0 70%;
-  padding: 0 15% 3em;
+  order: 3;
 }
 
 .preview__wrapper {

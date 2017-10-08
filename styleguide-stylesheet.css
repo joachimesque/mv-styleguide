@@ -60,8 +60,8 @@ a:hover::after {
     box-shadow: 0 2px;
     padding: .3rem .6rem;
     background-color: #eee;
+    margin: 0 0 2px;
 }
-
 .btn.btn-submit {
   background-color: #BFFFC9;
 }
@@ -69,6 +69,14 @@ a:hover::after {
   font-family: system-ui;
   content: "✓";
   margin-left: .2em;
+}
+.btn:active {
+    background-color: #ccc;
+    box-shadow: none;
+    margin: 2px 0 0;
+}
+.btn.btn-submit:active {
+  background-color: #A7DDAF;
 }
 
 label {
@@ -83,7 +91,9 @@ input[type="password"], input[type="email"] {
     padding: 0 .5rem;
 }
 
-input[type="email"]:invalid {
+input[type="email"]:invalid:not(:focus) {
+  /* The 'invalid' notification only appears when the user isn't focused.
+  No strange notification when they're filling the input */
     border-bottom-color: #b73232;
 }
 
