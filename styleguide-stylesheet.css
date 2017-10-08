@@ -1,0 +1,92 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+/* @import url(''); */
+
+/* Styles */
+html {
+  font-family: "Slabo 27px", sans-serif;
+  font-size: 16px;
+  padding: 1em;
+  line-height: 133%;
+}
+small { font-size: .8em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 133%;
+  text-align: left;
+}
+
+p { line-height: 166%; }
+
+html.iframe__content {
+  padding: 1em;
+}
+body.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styleguide-specific styles */
+
+a {
+  color: #1B1075;
+  text-decoration: underline;
+}
+a::after {
+  content: "➹";
+  color: #381FFF;
+  padding-left: .2em;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+a[href^="#"]::after {
+  content: "⚓";
+}
+a:hover::after {
+  color: #1B1075;
+}
+
+.btn {
+    font-family: "Slabo 27px", sans-serif;
+    border: 1.5px solid #444;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: 0 2px;
+    padding: .3rem .6rem;
+    background-color: #eee;
+}
+
+.btn.btn-submit {
+  background-color: #BFFFC9;
+}
+.btn.btn-submit::after {
+  font-family: system-ui;
+  content: "✓";
+  margin-left: .2em;
+}
+
+label {
+    display: block;
+}
+
+input[type="password"], input[type="email"] {
+    border: 1.5px solid #ccc;
+    border-radius: 2px;
+    border-bottom-color: #555;
+    line-height: 1.8em;
+    padding: 0 .5rem;
+}
+
+input[type="email"]:invalid {
+    border-bottom-color: #b73232;
+}
+
+.form__control {
+    margin-bottom: 1rem;
+}

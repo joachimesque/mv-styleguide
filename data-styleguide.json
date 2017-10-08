@@ -20,7 +20,7 @@
 		},
 		{
 			"title": "Simple login form",
-			"code__input": "<form action=\"styleguide_submit\" method=\"get\" accept-charset=\"utf-8\">\n  <div class=\"form__control\">\n    <label for=\"input__email\">Your email address</label>\n    <input type=\"email\" id=\"input__email\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <label for=\"input__password\">Your password</label>\n    <input type=\"password\" id=\"input__password\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <button type=\"submit\"></button>\n  </div>\n  <small><a href=\"forgot_password\">I forgot my password</a></small>\n</form>\n"
+			"code__input": "<form action=\"styleguide_submit\" method=\"get\" accept-charset=\"utf-8\">\n  <div class=\"form__control\">\n    <label for=\"input__email\">Your email address</label>\n    <input type=\"email\" id=\"input__email\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <label for=\"input__password\">Your password</label>\n    <input type=\"password\" id=\"input__password\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <button type=\"submit\" class=\"btn btn-submit\">Log in</button>\n  </div>\n  <small><a href=\"forgot_password\">I forgot my password</a></small>\n</form>\n"
 		}
 	]
 }
