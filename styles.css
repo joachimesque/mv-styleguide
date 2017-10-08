@@ -14,6 +14,7 @@ html {
 small { font-size: .66em; }
 pre, code, .monospace {
   font-family: "Inconsolata", monospace;
+  white-space: pre-wrap;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
