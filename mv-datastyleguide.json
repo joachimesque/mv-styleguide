@@ -1,0 +1,26 @@
+{
+	"element": [
+		{
+			"title": "An external link",
+			"text": "This is the default styling for an external link.",
+			"code__input": "<a href=\"http://joachimesque.github.com/mv-styleguide/\">an external link</a>"
+		},
+		{
+			"title": "An internal link",
+			"text": "This is the styling for a link pointing to an anchor in the document.",
+			"code__input": "<a href=\"#internal-link\">an internal link</a>"
+		},
+		{
+			"title": "Simple button",
+			"code__input": "<button class=\"btn\">Action</button>"
+		},
+		{
+			"title": "Submit button",
+			"code__input": "<button class=\"btn btn-submit\">Submit</button>"
+		},
+		{
+			"title": "Simple login form",
+			"code__input": "<form action=\"styleguide_submit\" method=\"get\" accept-charset=\"utf-8\">\n  <div class=\"form__control\">\n    <label for=\"input__email\">Your email address</label>\n    <input type=\"email\" id=\"input__email\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <label for=\"input__password\">Your password</label>\n    <input type=\"password\" id=\"input__password\" name=\"\" value=\"\" placeholder=\"\"/>\n  </div>\n  <div class=\"form__control\">\n    <button type=\"submit\"></button>\n  </div>\n  <small><a href=\"forgot_password\">I forgot my password</a></small>\n</form>\n"
+		}
+	]
+}
