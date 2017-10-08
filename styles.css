@@ -121,7 +121,9 @@ body.preview {
   color: #222;
   transition: none;
 }
-[mv-mode="edit"] .code__copybtn {
+
+[mv-mode="edit"] .code__copybtn,
+.mv-unsaved-changes .code__copybtn {
   display: none;
 }
 
