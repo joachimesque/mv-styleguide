@@ -1,11 +1,3 @@
-function addEventHandler(elem, eventType, handler) {
-    if (elem.addEventListener)
-        elem.addEventListener (eventType, handler, false);
-    else if (elem.attachEvent)
-        elem.attachEvent ('on' + eventType, handler); 
-}
-
-
 var forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
@@ -13,17 +5,21 @@ var forEach = function (array, callback, scope) {
 };
 
 function updateAllPreviewElements(previewElementSelector) {
-    var previewElementsList = document.querySelectorAll(previewElementSelector);
-    forEach(previewElementsList, function (index, value) {
-      console.log(this);
-        previewElementsList[index].innerHTML = previewElementsList[index].dataset.code;
+    var iframes = document.querySelectorAll("iframe");
+    forEach(iframes, function (index, value) {
+      // I add a little bit of space so the preview space isn't too cramped
+        iframes[index].height = iframes[index].contentWindow.document.body.scrollHeight + (16 * 2);
     });
 }
-addEventHandler(document, 'DOMContentLoaded', function() {
-    addEventHandler(document, 'mavo:load.mavo', function() {
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('mavo:load', function() {
+      console.log("mavo:load")
       updateAllPreviewElements('.preview');
     });
-    addEventHandler(document, 'mavo:datachange', function() {
+    document.addEventListener('mavo:save', function() {
+      console.log("mavo.save")
       updateAllPreviewElements('.preview');
     });
 });
