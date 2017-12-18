@@ -1,11 +1,12 @@
 // UTILS
-// 
+// a little forEach()
 var forEach = function (array, callback, scope) {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 
+// Set each iframe height to its content height
 function updateAllPreviewElements() {
   var iframes = document.querySelectorAll("iframe");
   forEach(iframes, function (index, value) {
@@ -49,19 +50,20 @@ function updateAllCopyBtns() {
   });
 }
 
+// Thanks to @mycayle for helping with this part
 document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('mavo:load', function() {
-    console.log("mavo:load");
+  document.addEventListener('mv-load', function(event) {
+    console.log("mv-load");
     updateAllPreviewElements();
     updateAllCopyBtns();
   });
-  document.addEventListener('mavo:save', function() {
-    console.log("mavo:save");
+  document.addEventListener('mv-save', function(event) {
+    console.log("mv-save");
     updateAllPreviewElements();
     updateAllCopyBtns();
   });
-  document.addEventListener('mavo:datachange', function() {
-    console.log("mavo:datachange");
+  document.addEventListener('mv-change', function(event) {
+    console.log("mv-change : ", event.action, event.property, event.value);
     updateAllPreviewElements();
   });
 });
